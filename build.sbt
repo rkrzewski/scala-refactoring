@@ -1,9 +1,9 @@
 name := "org.scala-refactoring.library"
 version := "0.14.0-SNAPSHOT"
-scalaVersion := "2.12.3"
+scalaVersion := "2.12.6"
 moduleName := name.value
 organization := "org.scala-refactoring"
-crossScalaVersions := Seq("2.10.6", "2.11.8", scalaVersion.value)
+crossScalaVersions := Seq("2.10.7", "2.11.12", scalaVersion.value)
 crossVersion := CrossVersion.full
 fork := true
 parallelExecution in Test := false
@@ -41,13 +41,12 @@ scalacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) match {
     "-feature",
     "-language:_",
     "-unchecked",
-    "-Xlint",
+    "-Xlint:_,-unused",
     "-Xfuture",
     "-Xfatal-warnings",
     "-Yno-adapted-args",
     "-Ywarn-dead-code",
-    "-Ywarn-unused-import",
-    "-Ywarn-unused:-patvars,-params,-implicits,_"
+    "-Ywarn-unused:imports,privates,locals"
   )
   case _ => Seq()
 })
