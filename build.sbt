@@ -1,6 +1,6 @@
 name := "org.scala-refactoring.library"
 version := "0.14.0-SNAPSHOT"
-scalaVersion := "2.12.6"
+scalaVersion := "2.12.7"
 moduleName := name.value
 organization := "org.scala-refactoring"
 crossScalaVersions := Seq("2.10.7", "2.11.12", scalaVersion.value)
